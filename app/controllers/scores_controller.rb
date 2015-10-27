@@ -24,6 +24,11 @@ class ScoresController < ApplicationController
   def edit
   end
 
+  def admin
+    @scores = Score.all
+    @score = Score.new
+  end
+
   # POST /scores
   # POST /scores.json
   def create

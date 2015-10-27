@@ -12,4 +12,10 @@
 #
 
 class Score < ActiveRecord::Base
+
+  # Score validations
+  validates :blairScore, presence: true
+  validates :peddieScore, presence: true
+  validates :team, presence: true
+
 end
