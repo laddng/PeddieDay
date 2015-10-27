@@ -1,0 +1,22 @@
+= form_for @score do |f|
+  - if @score.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@score.errors.count, "error")} prohibited this score from being saved:"
+      %ul
+        - @score.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :team
+    = f.text_field :team
+  .field
+    = f.label :blairScore
+    = f.number_field :blairScore
+  .field
+    = f.label :peddieScore
+    = f.number_field :peddieScore
+  .field
+    = f.label :active
+    = f.check_box :active
+  .actions
+    = f.submit 'Save'

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Team:
+  = @score.team
+%p
+  %b Blairscore:
+  = @score.blairScore
+%p
+  %b Peddiescore:
+  = @score.peddieScore
+%p
+  %b Active:
+  = @score.active
+
+= link_to 'Edit', edit_score_path(@score)
+\|
+= link_to 'Back', scores_path

@@ -1,0 +1,41 @@
+.header-bar
+  %h1.text-center Peddie Day
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th.text-center.blair.col-md-4 B
+      %th.text-center.tie.col-md-4 Tie
+      %th.text-center.peddie.col-md-4 P
+
+  %tbody
+    %tr
+      %td.text-center= @blair
+      %td.text-center= @tie
+      %td.text-center= @peddie
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Team
+      %th.text-center.blair B
+      %th.text-center.peddie P
+
+  %tbody
+    - @scores.each do |score|
+      %tr
+        %td
+          - if score.active == false
+            %span.text-muted= score.team
+            %em.small.text-muted.text-right Ended
+          - else
+            = score.team
+        - if score.blairScore > score.peddieScore
+          %td.text-center.blair= score.blairScore
+          %td.text-center.tie= score.peddieScore
+        - elsif score.peddieScore > score.blairScore
+          %td.text-center.tie= score.blairScore
+          %td.text-center.peddie= score.peddieScore
+        - else
+          %td.text-center.tie= score.blairScore
+          %td.text-center.tie= score.peddieScore
