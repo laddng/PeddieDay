@@ -1,4 +1,5 @@
 .header-bar
   %h1.text-center Scoremaster
 
-= render 'form'
+- @scores.each do |score|
+  = link_to score, edit_score_path(score)
