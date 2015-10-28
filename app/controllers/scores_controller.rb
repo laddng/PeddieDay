@@ -5,9 +5,9 @@ class ScoresController < ApplicationController
   # GET /scores.json
   def index
     @scores = Score.all
-    @blair = Score.where("blairScore>peddieScore").count
-    @peddie = Score.where("peddieScore>blairScore").count
-    @tie = Score.where("peddieScore==blairScore").count
+    # @blair = Score.where("blairScore > peddieScore").count
+    # @peddie = Score.where("peddieScore>blairScore").count
+    # @tie = Score.where("peddieScore==blairScore").count
   end
 
   # GET /scores/1
