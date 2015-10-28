@@ -32,9 +32,13 @@ gem "annotate"
 # for seeds
 gem "seedbank"
 
+# Google Analytics
+gem 'google-analytics-rails'
+
 group :production do
   # postgres for heroku db
   gem "pg"
+
 end
 
 group :development, :test do
