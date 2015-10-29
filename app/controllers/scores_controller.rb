@@ -34,7 +34,7 @@ class ScoresController < ApplicationController
   end
 
   def admin
-    @scores = Score.all
+    @scores = Score.all.order("team ASC")
     @score = Score.new
   end
 
