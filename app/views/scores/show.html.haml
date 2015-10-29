@@ -1,18 +1,24 @@
-%p#notice= notice
+.header-bar
+  %h1.text-center Result
+%p.text-success#notice= notice
 
 %p
   %b Team:
   = @score.team
 %p
-  %b Blairscore:
+  %b Blair:
   = @score.blairScore
 %p
-  %b Peddiescore:
+  %b Peddie:
   = @score.peddieScore
 %p
-  %b Active:
-  = @score.active
+  %b Game is still active:
+  - if @score.active == true
+    Yes
+  - else
+    No
 
-= link_to 'Edit', edit_score_path(@score)
-\|
-= link_to 'Back', controller: :scores, action: :admin
+%br
+= link_to 'Edit', edit_score_path(@score), class: "btn btn-lg btn-default btn-block"
+%br
+= link_to 'Back', {controller: :scores, action: :admin}, class: "btn btn-lg btn-primary btn-block"

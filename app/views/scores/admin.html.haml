@@ -1,5 +1,8 @@
 .header-bar
   %h1.text-center Scoremaster
 
-- @scores.each do |score|
-  = link_to score, edit_score_path(score)
+%table.table
+  - @scores.each do |score|
+    %tr
+      %td
+        = link_to score.team, edit_score_path(score)

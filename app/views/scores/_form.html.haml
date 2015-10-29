@@ -1,14 +1,18 @@
 = form_for @score do |f|
-  .field
-    = f.label :team, class: "label"
-  .field
-    = f.label :blairScore, "Blair", class: "label"
-    = f.number_field :blairScore, class: "form-control"
-  .field
-    = f.label :peddieScore, "Peddie", class: "label"
-    = f.number_field :peddieScore, class: "form-control"
+  .text-center=@score.team
+  %table.table.table-bordered
+    %tr
+      %th.text-center
+        Blair
+      %th.text-center
+        Peddie
+    %tr
+      %td
+        = f.number_field :blairScore, class: "form-control"
+      %td
+        = f.number_field :peddieScore, class: "form-control"
   .field
     = f.label :active, "Game is active", class: "label"
     = f.check_box :active, class: "form-control"
   .actions
-    = f.submit 'Save', class: "btn btn-success btn-block"
+    = f.submit 'Save Score', class: "btn btn-success btn-block"

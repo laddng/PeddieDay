@@ -36,7 +36,7 @@ class ScoresController < ApplicationController
 
     respond_to do |format|
       if @score.save
-        format.html { redirect_to @score, notice: 'Score was successfully created.' }
+        format.html { redirect_to @score, notice: 'Success' }
         format.json { render :show, status: :created, location: @score }
       else
         format.html { render :new }
@@ -50,7 +50,7 @@ class ScoresController < ApplicationController
   def update
     respond_to do |format|
       if @score.update(score_params)
-        format.html { redirect_to @score, notice: 'Score was successfully updated.' }
+        format.html { redirect_to @score, notice: 'Success' }
         format.json { render :show, status: :ok, location: @score }
       else
         format.html { render :edit }

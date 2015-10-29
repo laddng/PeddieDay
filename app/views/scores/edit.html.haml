@@ -1,7 +1,7 @@
-%h1 Editing score
+.header-bar
+  %h1.text-center Edit Score
 
 = render 'form'
 
-= link_to 'Show', @score
-\|
-= link_to 'Back', scores_path
+%br
+= link_to 'Back', {controller: :scores, action: :admin}, class: "btn btn-lg btn-primary btn-block"
