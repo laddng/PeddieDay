@@ -1,3 +1,4 @@
+%br
 = form_for @score do |f|
   .text-center=@score.team
   %table.table.table-bordered
@@ -8,11 +9,13 @@
         Peddie
     %tr
       %td
-        = f.number_field :blairScore, class: "form-control"
+        = f.number_field :blairScore, class: "form-score"
       %td
-        = f.number_field :peddieScore, class: "form-control"
-  .field
-    = f.label :active, "Game is active", class: "label"
-    = f.check_box :active, class: "form-control"
+        = f.number_field :peddieScore, class: "form-score"
+  %br
+  .form-group
+    = f.check_box :active
+    Game is still active
+  %br
   .actions
     = f.submit 'Save Score', class: "btn btn-success btn-block"
