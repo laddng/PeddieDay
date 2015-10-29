@@ -5,9 +5,18 @@ class ScoresController < ApplicationController
   # GET /scores.json
   def index
     @scores = Score.all
-    # @blair = Score.where("blairScore > peddieScore").count
-    # @peddie = Score.where("peddieScore>blairScore").count
-    # @tie = Score.where("peddieScore==blairScore").count
+    @blair = 0
+    @peddie = 0
+    @tie = 0
+    @scores.each do |score|
+      if (score.blairScore > score.peddieScore)
+        @blair = @blair+1
+      elsif (score.peddieScore > score.blairScore)
+        @peddie = @peddie+1
+      else
+        @tie = @tie+1
+      end
+    end
   end
 
   # GET /scores/1
