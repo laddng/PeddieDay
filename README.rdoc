@@ -2,21 +2,21 @@
 
 From Blair Academy's website: "Though a thoroughly modern-day boarding school, Blair and its athletics are steeped in tradition. Peddie Day, honoring the oldest prep school football rivalry in the state, has occurred each year since 1903. The tradition has grown into a day long event as Blair faces off against the Peddie School in a variety of sports as they compete for the Kelley-Potter Cup. The competition alternates each fall between the campuses of the two schools and showcases our strong school pride and spirit. A grand pep rally and bonfire on Friday night kicks off the weekend in which everyone participates, as team player, coach or cheering spectator."
 
+---
 
-* Ruby 2.2.0
+=== Setup
+Clone this repository
 
-* System dependencies
+Run the following to install gems, create the database, and seed data
+ $ bundle install
+ $ rake db:create
+ $ rake db:setup
 
-* Configuration
+Then to start the server, run
+ $ rails server
 
-* Database creation
+---
 
-* Database initialization
+=== Administrator Portal
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To access the administrator portal of this web app, simply go to */admin/ url of your app. You can change the score in this part of the app by selecting a team and then entering the score.
