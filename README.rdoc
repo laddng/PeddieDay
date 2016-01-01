@@ -12,8 +12,10 @@ Run the following to install gems, create the database, and seed data
  $ rake db:create
  $ rake db:setup
 
-Then to start the server, run
+Then to start the server locally, run
  $ rails server
+
+and proceed to localhost:3000 or whatever port you are using for the Rails server.
 
 ---
 
