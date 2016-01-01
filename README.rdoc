@@ -1,11 +1,9 @@
-== README
+== Peddie Day Mobile Web Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+From Blair Academy's website: "Though a thoroughly modern-day boarding school, Blair and its athletics are steeped in tradition. Peddie Day, honoring the oldest prep school football rivalry in the state, has occurred each year since 1903. The tradition has grown into a day long event as Blair faces off against the Peddie School in a variety of sports as they compete for the Kelley-Potter Cup. The competition alternates each fall between the campuses of the two schools and showcases our strong school pride and spirit. A grand pep rally and bonfire on Friday night kicks off the weekend in which everyone participates, as team player, coach or cheering spectator."
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby 2.2.0
 
 * System dependencies
 
@@ -22,7 +20,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
